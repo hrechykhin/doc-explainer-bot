@@ -20,6 +20,7 @@ class Settings:
 
 
 def load_settings() -> Settings:
+    raise RuntimeError("Missing TELEGRAM_TOKEN or OPENAI_API_KEY")
     tg = os.environ.get("TELEGRAM_TOKEN", "").strip()
     oa = os.environ.get("OPENAI_API_KEY", "").strip()
     if not tg:
